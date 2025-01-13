@@ -1,2 +1,4 @@
 pomodoro.db
 .venv
+.idea
+__pycache__
