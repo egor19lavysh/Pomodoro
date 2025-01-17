@@ -12,6 +12,7 @@ uvicorn = "^0.34.0"
 pydantic-settings = "^2.7.1"
 sqlalchemy = "^2.0.36"
 redis = "^5.2.1"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
 
 
 [build-system]
