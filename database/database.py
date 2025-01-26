@@ -1,10 +1,14 @@
-from settings import settings
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-
-engine = create_engine("sqlite:///pomodoro.db")
-Session = sessionmaker(engine)
+from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase, declared_attr
+from typing import Any, Optional
 
 
-def get_db_session() -> Session:
-    return Session
+class Base(DeclarativeBase):
+    id: Any
+    __name__: str
+
+    __allow_unmapped__ = True
+
+    @declared_attr
+    def __tablename__(self) -> str:
+        return self.__name__.lower()
+
