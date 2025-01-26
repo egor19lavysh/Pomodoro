@@ -7,5 +7,9 @@ class UserLoginSchema(BaseModel):
 
 
 class UserCreateSchema(BaseModel):
-    username: str
-    password: str
+    username: str | None
+    password: str | None
+    email: str | None = None
+    name: str | None = None
+    google_access_token: str | None = None
+    yandex_access_token: str | None = None
