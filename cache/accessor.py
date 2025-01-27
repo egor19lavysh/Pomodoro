@@ -1,4 +1,4 @@
-import redis
+from redis import asyncio as redis
 
 
 def get_redis_connection() -> redis.Redis:

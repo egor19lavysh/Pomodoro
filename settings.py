@@ -2,7 +2,8 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    DB_NAME: str = "pomodoro.db"
+    DB_NAME: str = "pomodoro.db"  # надо переписать на асинхронный движое, например, "postgresql+asyncpg", если бы
+                                  # использовали постгресс
     JWT_SECRET_KEY: str = "secret"
     JWT_ENCODE_ALGORITHM: str = "HS256"
     GOOGLE_CLIENT_ID: str = ''
